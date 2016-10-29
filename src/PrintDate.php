@@ -7,9 +7,9 @@ class PrintDate
     /** @var Printer */
     private $printer;
 
-    public function __construct()
+    public function __construct(Printer $printer)
     {
-        $this->printer = new Printer();
+        $this->printer = $printer;
     }
 
     public function printCurrentDate()
