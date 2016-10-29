@@ -12,10 +12,12 @@ class PrintDateTest extends TestCase
     /** @test */
     public function print_date()
     {
-        $printDate = new PrintDate(new Printer(), new Date());
+        $dateProphecy = $this->prophesize(Date::class);
+        $dateProphecy->currentDate()->willReturn('06-02-1982');
+        $printDate = new PrintDate(new Printer(), $dateProphecy->reveal());
 
         $printDate->printCurrentDate();
 
-        // Assert ??
+
     }
 }
