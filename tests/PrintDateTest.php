@@ -6,6 +6,7 @@ use LuisRovirosa\PrintDate\Date;
 use LuisRovirosa\PrintDate\PrintDate;
 use LuisRovirosa\PrintDate\Printer;
 use PHPUnit\Framework\TestCase;
+use Prophecy\Argument;
 
 class PrintDateTest extends TestCase
 {
@@ -14,10 +15,11 @@ class PrintDateTest extends TestCase
     {
         $dateProphecy = $this->prophesize(Date::class);
         $dateProphecy->currentDate()->willReturn('06-02-1982');
-        $printDate = new PrintDate(new Printer(), $dateProphecy->reveal());
+        $printerProphecy = $this->prophesize(Printer::class);
+        $printDate = new PrintDate($printerProphecy->reveal(), $dateProphecy->reveal());
 
         $printDate->printCurrentDate();
 
-
+        $printerProphecy->printString(Argument::any())->shouldHaveBeenCalled();
     }
 }
