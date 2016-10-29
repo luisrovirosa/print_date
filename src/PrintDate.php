@@ -4,6 +4,14 @@ namespace LuisRovirosa\PrintDate;
 
 class PrintDate
 {
+    /** @var Printer */
+    private $printer;
+
+    public function __construct()
+    {
+        $this->printer = new Printer();
+    }
+
     public function printCurrentDate()
     {
         $this->print($this->currentDate());
@@ -14,8 +22,8 @@ class PrintDate
         return date('d-m-Y');
     }
 
-    private function print($date){
-        $printer = new Printer();
-        $printer->print($date);
+    private function print($date)
+    {
+        $this->printer->print($date);
     }
 }
