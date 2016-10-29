@@ -1,0 +1,12 @@
+{
+    "name": "luisrovirosa/print_date",
+    "description": "Kata Print date",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Luis Rovirosa",
+            "email": "luisrovirosa@gmail.com"
+        }
+    ],
+    "require": {}
+}
