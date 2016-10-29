@@ -15,6 +15,7 @@ class PrintDate
     }
 
     private function print($date){
-        echo $date;
+        $printer = new Printer();
+        $printer->print($date);
     }
 }
