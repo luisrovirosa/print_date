@@ -19,7 +19,9 @@ class PrintDate
 
     private function currentDate():string
     {
-        return date('d-m-Y');
+        $date = new Date();
+
+        return $date->currentDate();
     }
 
     private function print($date)
