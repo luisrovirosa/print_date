@@ -6,6 +6,11 @@ class PrintDate
 {
     public function printCurrentDate()
     {
-        echo date('d-m-Y');
+        echo $this->currentDate();
+    }
+
+    private function currentDate():string
+    {
+        return date('d-m-Y');
     }
 }
