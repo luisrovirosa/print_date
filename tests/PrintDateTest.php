@@ -11,7 +11,7 @@ use Prophecy\Argument;
 class PrintDateTest extends TestCase
 {
     /** @test */
-    public function print_date()
+    public function prints_the_current_date_into_the_printer()
     {
         $dateProphecy = $this->prophesize(Date::class);
         $dateProphecy->currentDate()->willReturn('06-02-1982');
