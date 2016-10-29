@@ -5,8 +5,8 @@ namespace LuisRovirosa\PrintDate;
 class Printer
 {
 
-    public function print($date)
+    public function printString($text)
     {
-        echo $date;
+        echo $text;
     }
 }

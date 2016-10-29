@@ -17,7 +17,7 @@ class PrintDate
 
     public function printCurrentDate()
     {
-        $this->print($this->currentDate());
+        $this->printString($this->currentDate());
     }
 
     private function currentDate():string
@@ -25,8 +25,8 @@ class PrintDate
         return $this->date->currentDate();
     }
 
-    private function print($date)
+    private function printString($date)
     {
-        $this->printer->print($date);
+        $this->printer->printString($date);
     }
 }
